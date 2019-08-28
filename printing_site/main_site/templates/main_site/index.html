@@ -1,0 +1,378 @@
+{% extends 'main_site/base.html' %}
+{% load staticfiles %}
+{% block title %}
+Ателье 3D печать
+{% endblock %}
+
+{% block content %}
+
+		<section>
+
+                 <!-- Container for the image gallery -->
+                <div class="container">
+
+                  <!-- Full-width images with number text -->
+                  <div class="mySlides">
+                        <div class="numbertext">1 / 6</div>
+                        <img class='imagination' src="{% static 'images/portfolio_01.png' %}" style="width:50%">
+                      <div class="mySlides-div">
+                          <ul class="mySlides-ul">
+                            <h3>Детали печати</h3>
+                            <li><strong>Время печати:</strong> 13 часов</li>
+                            <li><strong>Вес:</strong>    246 грамм </li>
+                            <li><strong>Материал:</strong>  ABS</li>
+                            <li><strong>Качество:</strong>    0.2мм</li>
+                            <li><strong>Размеры:</strong>   82х108х164 мм</li>
+                            <li><strong>Стоимость:</strong>   920 рублей</li>
+
+                        </ul>
+                      </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                      <img src="{% static 'images/portfolio_02.png' %}" style="width:50%">
+                        <div class="mySlides-div">
+                          <ul class="mySlides-ul">
+                            <h3>Детали печати</h3>
+                            <li><strong>Время печати: </strong>3 часа 19 минут</li>
+                            <li><strong>Вес: </strong>48 грамм </li>
+                            <li><strong>Материал:   </strong>ABS</li>
+                            <li><strong>Качество: </strong> 0.2мм</li>
+                            <li><strong>Размеры:</strong> 33x57x105 мм</li>
+                            <li><strong>Стоимость: </strong> 310 рублей</li>
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                      <img src="{% static 'images/portfolio_03.jpg' %}" style="width:50%;">
+                        <div class="mySlides-div">
+                          <ul class="mySlides-ul">
+                            <h3>Детали печати</h3>
+                               <li><strong>Партия:  </strong>38 шт.</li>
+                            <li><strong>Время печати:</strong>103 часа</li>
+                            <li><strong>Общий вес: </strong>217 грамм </li>
+                            <li><strong>Материал: </strong>фотополимер</li>
+                            <li><strong>Качество:</strong> 0.04мм</li>
+                            <li><strong>Стоимость:</strong> 11 200 рублей</li>
+                        </ul>
+                      </div>
+                     </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                      <img src="{% static 'images/portfolio_04.png' %}" style="width:50%">
+                        <div class="mySlides-div">
+                          <ul class="mySlides-ul">
+                            <h3>Детали печати</h3>
+                            <li><strong>Партия:  </strong>100 шт.</li>
+                            <li><strong>Время печати: </strong>415 часов</li>
+                            <li><strong>Вес:</strong> 4кг 800 грамм </li>
+                            <li><strong>Материал:</strong>ABS</li>
+                            <li><strong>Качество:</strong> 0.2мм</li>
+
+                            <li><strong>Стоимость:</strong> 28 000 рублей</li>
+                        </ul>
+                  </div>
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                      <img src="{% static 'images/portfolio_05.png' %}" style="width:50%">
+                        <div class="mySlides-div">
+                          <ul class="mySlides-ul">
+                            <h3>Детали печати</h3>
+                            <li><strong>Партия:  </strong>10 шт.</li>
+                            <li><strong>Время печати: </strong>310 часов</li>
+                            <li><strong>Общий вес: </strong>3 кг 400 грамм </li>
+                            <li><strong>Материал: </strong>ABS</li>
+                            <li><strong>Качество:</strong> 0.2мм</li>
+                            <li><strong>Стоимость:</strong> 15 600 рублей</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                      <img src="{% static 'images/portfolio_06.png' %}" style="width:50%">
+                          <div class="mySlides-div">
+                          <ul class="mySlides-ul">
+                            <h3>Детали печати</h3>
+                                 <li><strong>Партия:  </strong>5 шт.</li>
+                            <li><strong>Время печати: </strong>35 часов</li>
+                            <li><strong>Вес: </strong>700 грамм </li>
+                            <li><strong>Материал: </strong>ABS</li>
+                            <li><strong>Качество:</strong> 0.2мм</li>
+
+                            <li><strong>Стоимость:</strong> 4 200 рублей</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  <!-- Next and previous buttons -->
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                  <!-- Image text -->
+                  <div class="caption-container">
+<!--                    <p id="caption"></p>-->
+                  </div>
+
+                  <!-- Thumbnail images -->
+                  <div class="row">
+                    <div class="column">
+                      <img class="demo cursor" src="{% static 'images/portfolio_01.png' %}" style="width:100%" onclick="currentSlide(1)" alt="Держатель для кружки">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="{% static 'images/portfolio_02.png' %}" style="width:100%" onclick="currentSlide(2)" alt="Вставка в BMW">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="{% static 'images/portfolio_03.jpg' %}" style="width:100%" onclick="currentSlide(3)" alt="Корпус">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="{% static 'images/portfolio_04.png' %}" style="width:100%" onclick="currentSlide(4)" alt="Соединитель для труб">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="{% static 'images/portfolio_05.png' %}" style="width:100%" onclick="currentSlide(5)" alt="Корпус Rasbery Pi">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="{% static 'images/portfolio_06.png' %}" style="width:100%" onclick="currentSlide(6)" alt="Подвес для велосипедов">
+                    </div>
+                  </div>
+                </div>
+
+                    <div class="order-row">
+                        <div class="order-col">
+                            <div class="order">
+                                <h4>-1-</h4>
+                                <p>3D МОДЕЛЬ</p>
+                                        <br>
+                            </div>
+                        </div>
+                          <div class="order-col">
+                            <div class="order">
+                                <h4>-2-</h4>
+                                <p>ПЕЧАТЬ</p>
+                                <br>
+
+
+                            </div>
+                        </div>
+                          <div class="order-col">
+                            <div class="order">
+                                <h4>-3-</h4>
+                               <p>ДОСТАВКА</p>
+                                <br>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                <h2 style="text-align: center; margin-top:240px; "><a name="technology"></a>ТЕХНОЛОГИИ</h2>
+
+                <div class="rowCards">
+                      <div class="colCards">
+                        <div class="card">
+                          <h3>FDM/FFF</h3>
+                            <p style="color:red; font-weight: 500; text-align: center;margin: 0; font-size: 14px;">от 6 руб за см3</p>
+
+
+                            <p style="; margin-top: 10px; font-weight: 300 ">
+                            Идеальное решением для большинства задач<br>   Низкая цена<br>
+                                Ассортимент материалов
+                           </p>
+                    <a  href="" style="text-align: center; margin: 0;padding: 0;">
+                    Все  материалы
+                    </a>
+                        </div>
+                      </div>
+                      <div class="colCards">
+                        <div class="card">
+                            <h3>SLA</h3>
+                            <p style="color:red; font-weight: 500; text-align: center;margin: 0; font-size: 14px;">от 30 руб за см3</p>
+                            <p style="font-weight: 300; margin-top: 10px;">
+                            Самая низкая цена на рынке<br>
+                            Идеальная поверхность<br>
+                            Точность 40 мкм <br>
+                            Низкий зольный остаток
+                            </p>
+                    <a  href="" style="text-align: center; margin: 0;padding: 0;">
+                    Все  материалы
+                    </a>
+                        </div>
+                      </div>
+                      <div class="colCards">
+                        <div class="card">
+                        <h3>DMLS</h3>
+                      <p style="color:red; font-weight: 500; text-align: center;margin: 0; font-size: 14px;">от 350 рублей за см3</p>
+                    <p style="font-weight: 300; margin-top: 10px;">
+                    Опыт печати металлом более 10 лет
+                    Индивидуальный подход. Выполнение сложных проектов под ключ
+                    </p>
+                    <a  href="" style="text-align: center; margin: 0;padding: 0;">
+                    Все  материалы
+                    </a>
+                        </div>
+                      </div>
+                    </div>
+                     <h2 style="text-align: center; margin-top:40px; background-color:#8f8f8f "><a name="materials"></a>МАТЕРИАЛЫ И ЦЕНЫ</h2>
+
+                    <p style="margin:10px; margin-left: 0; font-size: 14px;">Стоимость рассчитывается исходя из сложности работы, выбранного материала, а также постобработки. <br>Свяжитесь с менеджером для рассчета стоимости печати.</p>
+
+                     <table style="width:100%">
+                      <tr>
+                        <th style="font-size: 18px" >FDM/FFF материалы</th>
+                        <th class="center" > руб. за см<sup>3</sup></th>
+                      </tr>
+                      <tr>
+                        <td>ABS</td>
+                        <td class="center">6</td>
+                      </tr>
+                      <tr>
+                        <td>PLA</td>
+                        <td class="center">7</td>
+                      </tr>
+                      <tr>
+                        <td>HIPS</td>
+                        <td class="center">7</td>
+                      </tr>
+                      <tr>
+                        <td >ABS/PC</td>
+                        <td class="center">20</td>
+                      </tr>
+                      <tr>
+                        <td>PETg</td>
+                        <td class="center">13</td>
+                      </tr>
+                      <tr>
+                        <td >ABS/PC</td>
+                        <td class="center">20</td>
+                      </tr>
+                      <tr>
+                        <td>ForMAX</td>
+                        <td class="center">30</td>
+                      </tr>
+                      <tr>
+                        <td>PEEK</td>
+                        <td class="center">Дод заказ</td>
+                      </tr>
+                        <tr>
+                        <td>PEI</td>
+                        <td class="center">Под заказ</td>
+                      </tr>
+                      <tr>
+                        <th >SLA фотополимеры</th>
+                        <th  class="center">руб. за см<sup>3</sup></th>
+                      </tr>
+                         <tr>
+                        <td>Модельный полимер</td>
+                        <td class="center">30</td>
+                      </tr>
+                      <tr>
+                        <td>Выплавляемый полимер</td>
+                        <td class="center">7</td>
+                      </tr>
+                      <tr>
+                        <td>ABS подобный полимер</td>
+                        <td class="center">7</td>
+                      </tr>
+                      <tr>
+                      <th >DMLS печать металлом</th>
+                        <th  class="center">руб. за см<sup>3</sup></th>
+                      </tr>
+                         <tr>
+                        <td>СТАЛЬ 316l</td>
+                        <td class="center">30</td>
+                      </tr>
+
+                    </table>
+                    <h2 style="text-align: center; margin-top:40px"><a name="equlation"></a>РАСЧЕТ ПРОЧНОСТИ</h2>
+                    <div class="equlation">
+
+                        <p> <img align="right" hspace="10" src="{% static 'images/stress.png' %}" alt=""><br>
+                        Если иделие планируется эксплуатировать при высоких нагрузках, прежде чем преступить к печати целесообрзно провести  рассчет прочности. Расчет прочности
+                           позволяет подобрать оптимальные параметры печати и грамотно выбрать материал, что гарантирует длительную эксплуатацуию изделия.
+
+                        </p>
+                    </div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Обратная связь</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="contactForm" action="handler.php" method="post">
+						<div class="form-group">
+							<label for="name">Ваше имя:</label>
+							<input id="name" class="form-control" name="name" required type="text" placeholder="Иванов Иван Иванович">
+						</div>
+						<div class="form-group">
+							<label for="email">Ваш E-mail:</label>
+							<input id="email" class="form-control" name="email" required type="email" placeholder="ivanov@email.com">
+						</div>
+						<div class="form-group">
+							<label for="phone">Ваш телефон:</label>
+							<input id="phone" class="form-control" name="phone" required type="text" placeholder="+7 (800) 000-00-00">
+						</div>
+						<div class="form-group">
+							<label for="message">Текст сообщения:</label>
+							<textarea id="message" class="form-control" required name="message" rows="4"></textarea>
+						</div>
+						<div class="form-group form-check">
+							<input id="check" class="form-check-input" checked type="checkbox">
+							<label class="form-check-label" for="check">Я добровольно отправляю свои данные</label>
+						</div>
+						<button id="button" class="btn btn-success" type="submit">Отправить</button>
+						<div class="result">
+							<span id="answer"></span>
+							<span id="loader" style="display:none"><img src="{% static 'images/loader.gif' %}" alt=""></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+                <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#exampleModal">ЗАКАЗАТЬ</button>
+</section>
+	</div>
+
+   <footer>
+        <div id="footer">
+<!--
+            <div id="twitter">
+                <h3>TWITTER FEED</h3>
+                <time datetime="2012-10-23"><a href="#">23 oct</a></time>
+            <p>
+                In ultricies pellentesque massa a porta. Aliquam ipsum enim, hendrerit ut porta nec, ullamcorper et nulla. In eget mi dui, sit amet scelerisque nunc. Aenean aug
+            </p>
+            </div>
+            <div id="sitemap">
+                <h3>SITEMAP</h3>
+                <div>
+                    <a href="/home/">Home</a>
+                    <a href="/about/">About</a>
+                    <a href="/services/">Services</a>
+                </div>
+                <div>
+                    <a href="/partners/">Partners</a>
+                    <a href="/customers/">Support</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+            </div>
+            <div id="social"></div>
+            <div id="footer-logo"></div>
+-->
+        </div>
+
+    </footer>
+{% endblock %}
