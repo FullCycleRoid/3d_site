@@ -10,6 +10,12 @@
         <h1>
             Страница в разработке.
         </h1>
+        <form method="POST" enctype="multipart/form-data" action="">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Послать">
+        </form>
+
     </div>
 </section>
 </div>

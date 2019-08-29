@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.shortcuts import render, redirect
+from django.views.generic import TemplateView, FormView
+from main_site.forms import OrderForm
 
 # Create your views here.
-
+from main_site.models import Contacts
 
 
 class IndexTemplateView(TemplateView):
@@ -27,9 +28,19 @@ class MouldTemplateView(TemplateView):
     template_name = "main_site/mould.html"
     title = 'mould'
 
-class ContactsTemplateView(TemplateView):
+class ContactsTemplateView(FormView):
     template_name = "main_site/contacts.html"
     title = 'contacts'
+    form_class = OrderForm
+    fields = 
+    success_url = '/'
+
+    def form_valid(self, form):
+
+        Contacts.objects.create(**form.cleaned_data)
+
+        return redirect(self.get_success_url())
+
 
 class RezkaTemplateView(TemplateView):
     template_name = "main_site/rezka.html"
