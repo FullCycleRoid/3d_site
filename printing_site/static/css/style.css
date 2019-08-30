@@ -552,10 +552,17 @@ tr:nth-child(even) {
 
 
 ---------------------------------------------------------
-/*Zaglushka*/
+/*Contact*/
 ---------------------------------------------------------
 
-.zaglushka-container{
-    margin-top:200px;
-    text-content:center;
+.contact-wrapper {
+    color:red
+}
+
+.contact-info{
+    color:red
+}
+
+.contact-form{
+
 }

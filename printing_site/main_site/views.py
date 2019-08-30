@@ -32,7 +32,6 @@ class ContactsTemplateView(FormView):
     template_name = "main_site/contacts.html"
     title = 'contacts'
     form_class = OrderForm
-    fields = 
     success_url = '/'
 
     def form_valid(self, form):

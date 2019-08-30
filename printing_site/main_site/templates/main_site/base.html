@@ -31,7 +31,7 @@
                {% if 'scan' in view.title %} <li class="active"><a class="top-menu_a" href="{% url 'main_site:scan' %}">СКАНИРОВАНИЕ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'main_site:scan' %}">СКАНИРОВАНИЕ</a></li>{%endif%}
                {% if 'mould' in view.title %}<li class="active"><a class="top-menu_a" href="{% url 'main_site:mould' %}">ЛИТЬЕ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'main_site:mould' %}">ЛИТЬЕ</a></li>{%endif%}
                {% if 'rezka' in view.title %} <li class="active"><a class="top-menu_a" href="{% url 'main_site:rezka' %}">РЕЗКА</a></li>{% else%} <li><a class="top-menu_w" href="{% url 'main_site:rezka' %}">РЕЗКА</a></li>{%endif%}
-               {% if 'contacts' in view.title %}<li class="active"><a class="top-menu_a"   href="{% url 'main_site:contacts' %}">КОНТАКТЫ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'main_site:contacts' %}">КОНТАКТЫ</a></li>{%endif%}
+               {% if form %}<li class="active"><a class="top-menu_a"   href="{% url 'email:email' %}">КОНТАКТЫ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'email:email' %}">КОНТАКТЫ</a></li>{%endif%}
             </ul>
         </nav>
             <div id="heading">
