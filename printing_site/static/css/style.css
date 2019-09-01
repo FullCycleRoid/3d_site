@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 62.5%;
@@ -6,43 +9,39 @@ html {
 body {
 	color: #8f8f8f;
 	font: 12px 'Oswald', sans-serif;
-	background-color: #f8f8f8;
+	background-color: #e4e4e4;
 	border-top: 5px solid #7e7e7e;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  hyphens: auto;
-}
+
 header{
+
     margin-bottom: 20px
     text-align: justify;
     letter-spacing: 1px;
-    height: 8em;
+    height:auto;
+
 }
 
 header img{
-
     margin: 0;
     padding: 0;
-    
     padding-top:10px;
-    height: 80px
+    width:150px;
+    height:150px;
+    margin-left:50px;
 }
 
 .h-contacts{
     font-size: 20px;
-    margin-top: 20px;
-    margin-right: 10px;
+    margin-top: 60px;
+    margin-right: 60px;
     padding: 0;
     float: right;
 }
 .h-contacts p {
     margin: 0;
 
-}
-
-p {
-	margin: 20px 0;
 }
 
 #wrapper {
@@ -66,20 +65,28 @@ nav li {
 }
 
 .top-menu li {
+clear:both;
 	display: inline-block;
 	padding: 10px 30px;
 	margin: 0;
+
 }
 
 .top-menu_a {
 	color: #fff;
 }
+.top-menu a:hover{
+	text-decoration:none;
+	color:black;
+}
+
 .top-menu_w{
 	color: #b2b2b2;
 }
 .top-menu li.active{
 	background: #29c5e6;
 	color: #fff;
+
 }
 
 
@@ -241,9 +248,6 @@ footer p {
 ----------------------------------
 IMAGE GALLERY
 ----------------------------------
-* {
-  box-sizing: border-box;
-}
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
@@ -252,7 +256,7 @@ IMAGE GALLERY
 }
 .row{
     margin:0;
-    margin-bottom: `10px;
+    margin-bottom: 10px;
     height: 85px;
 }
 
@@ -392,11 +396,11 @@ IMAGE GALLERY
 }
 
 .colCards{
-  margin-top:20px;
-  float:left;
-  width: 33%;
-  padding: 0 10px;
-  font-size: 16px;
+    margin-top:20px;
+    float:left;
+    width: 33%;
+    padding: 0 10px;
+    font-size: 16px;
     overflow: auto;
     
 }
@@ -404,18 +408,18 @@ IMAGE GALLERY
 /* Remove extra left and right margins, due to padding in columns */
 /* Clear floats after the columns */
 .rowCards:after {
-  content: "";
-  display: table;
-  clear: both;
-margin-bottom: 50px;
-        overflow: auto;
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 50px;
+    overflow: auto;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 32px;
     overflow: auto;
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
     
 }
 
@@ -453,21 +457,20 @@ caption {
 */
 }
 th {
-  border-bottom: 3px solid #29c5e6;
-  padding: 10px;
-  text-align: left;
+    border-bottom: 3px solid #29c5e6;
+    padding: 10px;
+    text-align: left;
     font-size: 18px;
 
 }
 td {
-
-  padding: 10px;
+    padding: 10px;
 }
 tr:nth-child(odd) {
   background: white;
 }
 tr:nth-child(even) {
-  background:  #f8f8f8;
+  background:  #e4e4e4;
 }
 
 .center{
@@ -545,24 +548,27 @@ tr:nth-child(even) {
     width: 40%;
     margin-bottom: 0
 }
-
+/*
 ---------------------------------------------------------
-/*form*/
+form
 ---------------------------------------------------------
+*/
+/*
+---------------------------------------------------------
+Contact
+---------------------------------------------------------
+*/
+
+.contact-info h3{
 
 
----------------------------------------------------------
-/*Contact*/
----------------------------------------------------------
+    margin:40px;
+    font-size:20px;
 
-.contact-wrapper {
-    color:red
 }
 
-.contact-info{
-    color:red
-}
-
-.contact-form{
+.contact-info h3:first-child{
+    margin-top:100px
 
 }
+

@@ -15,7 +15,7 @@
 <body>
 <div id="wrapper">
         <header>
-	        <a href="/"><img src="{% static 'images/logo.png'%}" alt="Whitesquare logo" style="height: 80px; width: 150px; margin-left: 40px; margin-top: 10px;"></a>
+	        <a href="/"><img src="{% static 'images/logo.png'%}" alt="Whitesquare logo" ></a>
 
             <div class="h-contacts">
             <p>+7(904) 332 89 40</p>
@@ -25,34 +25,40 @@
         </header>
         <nav>
             <ul class="top-menu">
-               {% if 'home' in view.title %} <li class="active"><a class="top-menu_a" href="{% url 'main_site:home' %}">ГЛАВНАЯ</a></li>{%else%}<li><a class="top-menu_w" href="{% url 'main_site:home' %}">ГЛАВНАЯ</a></li>{%endif%}
-               {% if 'index' in view.title %}<li class="active"><a class="top-menu_a" href="{% url 'main_site:index' %}">3D ПЕЧАТЬ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'main_site:index' %}">3D ПЕЧАТЬ</a></li>{%endif%}
-               {% if 'model' in view.title %} <li class="active"><a class="top-menu_a" href="{% url 'main_site:model' %}">МОДЕЛИРОВАНИЕ</a></li>{% else%}  <li><a class="top-menu_w" href="{% url 'main_site:model' %}">МОДЕЛИРОВАНИЕ</a></li>{%endif%}
-               {% if 'scan' in view.title %} <li class="active"><a class="top-menu_a" href="{% url 'main_site:scan' %}">СКАНИРОВАНИЕ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'main_site:scan' %}">СКАНИРОВАНИЕ</a></li>{%endif%}
-               {% if 'mould' in view.title %}<li class="active"><a class="top-menu_a" href="{% url 'main_site:mould' %}">ЛИТЬЕ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'main_site:mould' %}">ЛИТЬЕ</a></li>{%endif%}
-               {% if 'rezka' in view.title %} <li class="active"><a class="top-menu_a" href="{% url 'main_site:rezka' %}">РЕЗКА</a></li>{% else%} <li><a class="top-menu_w" href="{% url 'main_site:rezka' %}">РЕЗКА</a></li>{%endif%}
-               {% if form %}<li class="active"><a class="top-menu_a"   href="{% url 'email:email' %}">КОНТАКТЫ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'email:email' %}">КОНТАКТЫ</a></li>{%endif%}
+               {% if 'Главная' in view.title %} <li class="active"><a class="top-menu_a" href="{% url 'main_site:home' %}">ГЛАВНАЯ</a></li>{%else%}<li><a class="top-menu_w" href="{% url 'main_site:home' %}">ГЛАВНАЯ</a></li>{%endif%}
+               {% if '3D печать' in view.title %}<li class="active"><a class="top-menu_a" href="{% url 'main_site:index' %}">3D ПЕЧАТЬ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'main_site:index' %}">3D ПЕЧАТЬ</a></li>{%endif%}
+               {% if 'Моделирование' in view.title %} <li class="active"><a class="top-menu_a" href="{% url 'main_site:model' %}">МОДЕЛИРОВАНИЕ</a></li>{% else%}  <li><a class="top-menu_w" href="{% url 'main_site:model' %}">МОДЕЛИРОВАНИЕ</a></li>{%endif%}
+               {% if '3D сканирование' in view.title %} <li class="active"><a class="top-menu_a" href="{% url 'main_site:scan' %}">СКАНИРОВАНИЕ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'main_site:scan' %}">СКАНИРОВАНИЕ</a></li>{%endif%}
+               {% if 'Литье' in view.title %}<li class="active"><a class="top-menu_a" href="{% url 'main_site:mould' %}">ЛИТЬЕ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'main_site:mould' %}">ЛИТЬЕ</a></li>{%endif%}
+               {% if 'Лазерная резка' in view.title %} <li class="active"><a class="top-menu_a" href="{% url 'main_site:rezka' %}">РЕЗКА</a></li>{% else%} <li><a class="top-menu_w" href="{% url 'main_site:rezka' %}">РЕЗКА</a></li>{%endif%}
+               {% if 'Контакты' in view.title %}<li class="active"><a class="top-menu_a"  href="{% url 'main_site:contacts' %}">КОНТАКТЫ</a></li>{% else%}<li><a class="top-menu_w" href="{% url 'main_site:contacts' %}">КОНТАКТЫ</a></li>{%endif%}
             </ul>
         </nav>
             <div id="heading">
-                <h1>3D ПЕЧАТЬ</h1>
+                <h1>{% if view.title %}{{view.title}} {% else %} 3D Ателье {% endif %}</h1>
+
             </div>
-		<aside>
+
+    		<aside>
             <nav>
                 <ul class="aside-menu">
 
-                    <li class="active">3D ПЕЧАТЬ</li>
-                    <li><a href="#technology">Технологии</a></li>
-                    <li><a href="#materials">Материалы</a></li>
-                    <li><a href="#materials">Цены</a></li>
-                    <li><a href="#equlation">Расчет прочности</a></li>
-                    <li><a href="#order">Заказ и доставка</a></li>
+                    <li class="active">{{view.title}}</li>
+                    {% for key, values in view.menu.items %}
+                        <li><a href="{{key}}">{{ values }}</a></li>
+                    {% endfor %}
+<!--                    <li><a href="#technology">Технологии</a></li>-->
+<!--                    <li><a href="#materials">Материалы</a></li>-->
+<!--                    <li><a href="#materials">Цены</a></li>-->
+<!--                    <li><a href="#equlation">Расчет прочности</a></li>-->
+<!--                    <li><a href="#order">Заказ и доставка</a></li>-->
 
                 </ul>
             </nav>
             <h2>Адрес офиса</h2>
             <p><img src="{% static 'images/map.png' %}" width="230" height="180" alt="Наш Офис"></p>
         </aside>
+
 {% block content %}
 {% endblock %}
 
