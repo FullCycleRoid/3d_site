@@ -1,34 +1,113 @@
 {% extends 'pages/base.html' %}
 {% load static %}
-{% block title %}
-Ателье 3D печать
-{% endblock %}
+{% block title %}Печать металлом{% endblock %}
 
 {% block content %}
+
 <section>
-        <div class="zaglushka-container">
-        <h1>
-            Страница в разработке.
-        </h1>
+    <div class="metal-first-screen">
+        <div class="metal-first-screen__title">
+            МЫ ДЕЛАЕМ ПЕЧАТЬ МЕТАЛЛОМ <span>ДОСТУПНОЙ</span>
+        </div>
+        <img src="{% static 'images/metal/metal_offer.jpg' %}" alt="">
+        <input type="submit" value="Рассчитать STL">
     </div>
+    <div class="process">
+        <div class="process__title">
+            ПРОЦЕСС ПЕЧАТИ МЕТАЛЛОМ
+        </div>
+        <div class="process__block">
+            <img class="process__block__img" src="{% static 'images/process/process1.jpg' %}" alt="">
+            <div class="process__line"></div>
+            <div class="process__block__text-item">
+                <div class="process__block__text-item__title">1/4 ПЕЧАТЬ</div>
+                <div class="process__block__text-item__paragraph">
+                    Детали печатаются с использованием технологии
+                    FDM / FFF из филамента состоящего на 90% из металла и 10% полимера.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="properties">
+        <div class="properties__title">НЕРЖАВЕЮЩАЯ СТАЛЬ 316L</div>
+        <div class="properties__table">
+            <div class="first_col">
+                <div>предел прочности</div>
+                <div>предел текучести</div>
+                <div>относительное удлинение</div>
+                <div>твердость по Викерсу</div>
+            </div>
+            <div class="second_col">
+                <div>561 MPa</div>
+                <div>251 MPa</div>
+                <div>53%</div>
+                <div>128HV10</div>
+            </div>
+        </div>
+        <div class="properties__border"></div>
+        <img class="properties__first_img" src="{% static 'images/metal/properties2.jpg' %}" alt="">
+        <img class="properties__second_img" src="{% static 'images/metal/properties1.jpg' %}" alt="">
 
-        <a class="btn" data-toggle="modal" href="#myModal" >Запустить пример всплывающего окна</a>
-
-    <div class="modal" id="myModal">
-      <div class="modal-header">
-        <button class="close" data-dismiss="modal">×</button>
-        <h3>Заголовок</h3>
-      </div>
-      <div class="modal-body">
-        <p>Текст…</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#" class="btn">Закрыть</a>
-        <a href="#" class="btn btn-primary">Сохранить</a>
-      </div>
+    </div>
+    <div class="application">
+        <div class="application__title">ПРИМЕНЕНИЕ</div>
+        <div class="application__body">
+            <div class="application__body__block">
+                <img src="{% static 'images/metal/application1.jpg' %}" alt="">
+                <p>
+                    Детали из нержавеющей стали 316L идеально подходят для изготовления инструментов, приспособлений,
+                    пресс-форм и других функциональных деталей, где важны долговечность и прочность.
+                    Ultrafuse 316L - отличное решение для медицинской, автомобильной или аэрокосмической промышленности
+                    для создания функциональных прототипов и серийного производства.
+                </p>
+            </div>
+            <div class="application__body__block">
+                <img src="{% static 'images/metal/application2.jpg' %}" alt="">
+                <p>
+                    Доступное и простое в использовании решение для 3D-печати механических и функциональных деталей из
+                    металла. Нержавеющая сталь 316L устойчива к коррозии, прочна и надежна. Готовая деталь надежна и
+                    готова выдержать многократные нагрузки.
+                    Ultrafuse 316L является отличным вариантом для создания прототипов, а также для серийного
+                    производства функциональных деталей конечного использования.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="print_at_home">
+        <div class="print_at_home__block-title">
+            <div class="print_at_home__block-title__title">
+                ТЕПЕРЬ ВЫ МОЖЕТЕ ПЕЧАТАТЬ У СЕБЯ ДОМА
+            </div>
+            <div class="print_at_home__block-title__paragraph">
+                <p>
+                    <span>Теперь вы можете печать даже у себя дома используя обычный 3D принтер! </span> <br>
+                    Вместе с покупкой материала Ultrafuse, купите Тикет на дебиндинг и спекание. <br>
+                    Вы присылаете распечатанный сырец нам, мы проводим обработку и высылаем готовое изделие обратно.
+                </p>
+            </div>
+            <div class="print_at_home__images-block">
+                <div class="print_at_home__images-block__item">
+                    <img src="{% static 'images/at_home/Frame2.png' %}" alt="">
+                    <p>МАТЕРИАЛ</p>
+                </div>
+                <div class="print_at_home__images-block__track"></div>
+                <div class="print_at_home__images-block__item">
+                    <img src="{% static 'images/at_home/Frame1.png' %}" alt="">
+                    <p>ПЕЧАТЬ</p>
+                </div>
+                <div class="print_at_home__images-block__track"></div>
+                <div class="print_at_home__images-block__item">
+                    <img src="{% static 'images/at_home/Frame3.png' %}" alt="">
+                    <p>ТИКЕТ НА ДЕБИНБИНГ И СПЕКАНИЕ</p>
+                </div>
+                <div class="print_at_home__images-block__track"></div>
+                <div class="print_at_home__images-block__item">
+                    <img src="{% static 'images/at_home/Frame4.png' %}" alt="">
+                    <p>ВЫСЫЛАЕМ ОБРАТНО ГОТОВОЕ ИЗДЕЛИЕ</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-</div>
-
-
+<script src="{% static 'js/scroll_slider.js' %}"></script>
 {% endblock %}

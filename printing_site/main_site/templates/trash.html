@@ -1,0 +1,30 @@
+<!--aside-->
+
+
+<!--        <aside>-->
+<!--        <nav>-->
+<!--            <ul class="aside-menu">-->
+<!--                <li class="active">{{view.title}}</li>-->
+<!--                {% for key, values in view.menu.items %}-->
+<!--                    <li><a href="{{key}}">{{ values }}</a></li>-->
+<!--                {% endfor %}-->
+<!--&lt;!&ndash;                    <li><a href="#technologies">Технологии</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="#materials">Материалы</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="#materials">Цены</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="#equlation">Расчет прочности</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="#order">Заказ и доставка</a></li>&ndash;&gt;-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--        <h2>Адрес офиса</h2>-->
+<!--        <p><img src="{% static 'images/map.png' %}" width="230" height="180" alt="Наш Офис"></p>-->
+<!--    </aside>-->
+
+
+        <ul class="navbar">
+            <li><a class="bg-white{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%} bg-dark{%endif%}" href="{% url 'main_site:printing' %}">ПЕЧАТЬ    МЕТАЛЛОМ</a></li>
+            <li><a class="bg-white{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%} bg-dark{%endif%}">МАТЕРИАЛЫ</a></li>
+            <li><a class="bg-white{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%}bg-dark{%endif%}" href="{% url 'main_site:about' %}">3D ФЕРМА</a></li>
+            <li><a class="bg-white{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%} bg-dark{%endif%}" href="{% url 'main_site:sintering' %}">СПЕКАНИЕ</a></li>
+            <li><a class="bg-white{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%} bg-dark{%endif%}">УСЛУГИ</a></li>
+            <li><a class="bg-white{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%} bg-dark{%endif%}" href="{% url 'main_site:contacts' %}">КОНТАКТЫ</a></li>
+        </ul>

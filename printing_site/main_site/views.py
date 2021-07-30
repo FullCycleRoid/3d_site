@@ -1,47 +1,40 @@
-from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, FormView
-from main_site.forms import OrderForm
-from sendemail.forms import ContactForm
-
-# Create your views here.
 
 
-class IndexTemplateView(FormView):
-    template_name = "main_site/index.html"
-    title = '3D печать'
-
-    menu = {'#technology':'Технологии','#materials':'Материалы','#price':'Цены',
-            '#equlation':'Расчет прочности','#order':'Заказ и доставка'}
-
-    form_class = ContactForm
-    success_url = 'success'
-
-class HomeTemplateView(TemplateView):
-    template_name = "main_site/home.html"
+class MainTemplateView(TemplateView):
+    template_name = "pages/main.html"
     title = 'Главная'
 
-class ScanTemplateView(TemplateView):
-    template_name = "main_site/scan.html"
-    title = '3D сканирование'
-
-class ModelTemplateView(TemplateView):
-    template_name = "main_site/model.html"
-    title = 'Моделирование'
-
-    menu = {'#3dmax':'Поверхностное','#solid':'Твердотельное'}
+    menu = {'#technologies': 'Технологии', '#materials': 'Материалы', '#price': 'Цены',
+            '#equlation': 'Расчет прочности', '#order': 'Заказ и доставка'}
 
 
-class MouldTemplateView(TemplateView):
-    template_name = "main_site/mould.html"
-    title = 'Литье'
+class SinteringTemplateView(TemplateView):
+    template_name = "pages/sintering.html"
+    title = 'Спекание'
+
+class MetalTemplateView(TemplateView):
+    template_name = "pages/metal.html"
+    title = 'Металл'
+
+
+class PrintingTemplateView(TemplateView):
+    template_name = "pages/metal.html"
+    title = 'Печать'
+
+
+class FarmTemplateView(TemplateView):
+    template_name = "pages/farm.html"
+    title = '3D Ферма'
+
 
 class ContactsTemplateView(TemplateView):
-    template_name = "main_site/contacts.html"
+    template_name = "pages/contacts.html"
     title = 'Контакты'
 
 
-class RezkaTemplateView(TemplateView):
-    template_name = "main_site/rezka.html"
-    title = 'Лазерная резка'
+class MaterialsTemplateView(TemplateView):
+    template_name = "pages/materials.html"
+    title = 'Материалы'
 
 

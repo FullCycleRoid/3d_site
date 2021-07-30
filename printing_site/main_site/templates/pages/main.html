@@ -1,100 +1,150 @@
-{% extends 'main_site/base.html' %}
+{% extends 'pages/base.html' %}
 
 {% load static %}
 
-{% block title %}Печать металлом{% endblock %}
+{% block title %}3D ФЕРМА{% endblock %}
 
-{% block offer %}
-        <div class="first-screen">
-                <div class="first-screen__left">
-                        <h2 class="first-screen__left-offer">Ферма 3D печати</h2>
-                        <img src="{% static 'images/image 11.png' %}"alt="">
-                </div>
-                <div class="first-screen__right">
-                        <input type="button" value="Калькулятор стоимости STL">
-                        <img src="{% static 'images/image_01.jpg' %}" alt="">
-                        <div class="first-screen__text">
-                                <div class="first-screen__offer">Самая доступная печать металлом в России</div>
-                                <h2>Профессиональное оборудование</h2>
-                                <h2>Печать металлом от 100 руб/см3</h2>
-                                <h2>Зона печати до 300х400х500 мм</h2>
-                                <h2>Материал: Нержавеющая сталь 316l</h2>
-                                <h2>3d моделирование 800 руб/час</h2>
-                                <h2>График работы: Пн-Пт с 08.00 до 20.00</h2>
-                                <h2>E-mail:</h2>
-                                <h2>Тел.: +7 812 467-36-35</h2>
-                        </div>
+{% block content %}
+    <div class="first-screen">
+        <div class="first-screen__left">
+                <h2 class="first-screen__left__title">3D ферма</h2>
+                <div class="send-file-block">
+                    <h2 class="send-file__title">Загрузите файл в формате STL,SLDPT или архив для рассчета стоимости</h2>
+                    <input type="file" value="выбрать файл">
+                    <input type="text" onfocus="this.value=''" value="Введите телефон для обратной связи">
+                    <input  class="send-file__comment" onfocus="this.value=''"  type="text" value="Оставьте дополнительную информацию если требуется">
+                    <input type="submit" value="Отправить запрос">
                 </div>
         </div>
-        <div class="process">
-
+        <div class="first-screen__right">
+                <input id="calc-btn" type="button" value="Консультация инженера">
+                <img src="{% static 'images/image_01.jpg' %}" alt="">
+                <div class="first-screen__right__text-block">
+                    <div class="first-screen__right__title">Самая доступная печать металлом в России</div>
+                        <h2>Профессиональное оборудование</h2>
+                        <h2>Печать металлом от 100 руб/см3</h2>
+                        <h2>Материал: Нержавеющая сталь 316l</h2>
+                        <h2>CAD моделирование 700 руб/час</h2>
+                        <h2>График работы: Пн-Пт с 08.00 до 20.00</h2>
+                        <h2>E-mail: feedmetal@gmail.com</h2>
+                        <h2>Тел.: +7 904 332-89-40</h2>
+                    </div>
+            <input id="right_btn" type="submit" value="Консультация инженера">
         </div>
-        <div class="materials">
-                <div class="container">
-                        <div class="materials__block">
-                                <div>
-                                        <div class="materials__title">
-                                                <h1>Материалы</h1>
-                                        </div>
-                                        <div class="materials_text">
-                                                Металлонаполненный пластик - представляет
-                                                собой инновационную нить для
-                                                для производства деталей из стали марки 316L.
-                                        </div>
-                                </div>
-                                <img src="{% static 'images/filament.png' %}" alt="">
-                        </div>
-                        <div class="material-table">
-                                <h1>Характеристики</h1>
-                               <div class="divTable">
-                                        <div class="div-table-col">
-                                            <div class="divRow">
-                                                <div class="divCell">Предел прочности</div>
-                                                <div  class="divCell">Предел текучести</div>
-                                                <div  class="divCell">Относительное удлиннение</div>
-                                                <div  class="divCell">Твердость по Виккерсу</div>
-                                             </div>
-                                        </div>
-                                        <div class="div-table-col">
-                                            <div class="divRow">
-                                                  <div class="divCell">561 MPa</div>
-                                                <div class="divCell">251 MPa</div>
-                                                <div class="divCell">53%</div>
-                                                <div class="divCell">128HV10</div>
-                                            </div>
-                                        </div>
-                              </div>
-                        </div>
+    </div>
+    <div class="equipment">
+        <div class="container flex-container align-center direction-column">
+            <h2 class="section__title">ТЕХНОЛОГИИ И УСЛУГИ</h2>
+            <p class="section__subtitle">Парк оборудования позволяет в кротчайшие сроки выпорлнять серийные заказы</p>
+        </div>
+        <div class="container flex-container align-center">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">технология</th>
+                  <th scope="col">Зона печати</th>
+                  <th scope="col">Точность</th>
+                  <th scope="col">Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">FDM</th>
+                  <td>до 400х400х450 мм</td>
+                  <td>0.4 мм</td>
+                  <td>от 8 руб./см3</td>
+                </tr>
+                <tr>
+                  <th scope="row">Фотополимерная печать</th>
+                  <td>92х120х200 мм</td>
+                  <td>0.043 мм</td>
+                  <td>от 30 руб./см3</td>
+                </tr>
+                <tr>
+                  <th scope="row">Печать металлом</th>
+                  <td>270х210х200 мм</td>
+                  <td>0.4 мм</td>
+                  <td>от 100 руб./см3</td>
+                </tr>
+                <tr>
+                  <th scope="row">CAD моделирование<th>
+                  <th></th>
+                  <td>700 руб./час</td>
+                </tr>
+                <tr>
+                  <th scope="row">Поверхностное моделирование<th>
+                  <th></th>
+                  <td>1000 руб./час</td>
+                </tr>
+                <tr>
+                  <th scope="row">3D сканирование<th>
+                  <th></th>
+                  <td>от 3000 руб.</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="materials">
+        <div class="container">
+            <div class="materials__block">
+                <div>
+                    <div class="materials__title">
+                            <h1>Материалы</h1>
+                    </div>
+                    <div class="materials_text">
+                            Металлонаполненный пластик - представляет
+                            собой инновационную нить для
+                            для производства деталей из стали марки 316L.
+                    </div>
                 </div>
+                <img src="{% static 'images/filament.png' %}" alt="">
+            </div>
+            <div class="material-table">
+                    <h1>Характеристики</h1>
+                   <div class="divTable">
+                        <div class="div-table-col">
+                            <div class="divRow">
+                                <div class="divCell">Предел прочности</div>
+                                <div  class="divCell">Предел текучести</div>
+                                <div  class="divCell">Относительное удлиннение</div>
+                                <div  class="divCell">Твердость по Виккерсу</div>
+                             </div>
+                        </div>
+                        <div class="div-table-col">
+                            <div class="divRow">
+                                  <div class="divCell">561 MPa</div>
+                                <div class="divCell">251 MPa</div>
+                                <div class="divCell">53%</div>
+                                <div class="divCell">128HV10</div>
+                            </div>
+                        </div>
+                  </div>
+            </div>
         </div>
-        <div class="application">
-
-        </div>
-        <div class="chain">
-
-        </div>
-        <div class="contacts">
-            <h1>Контакты</h1>
-            <img class="contacts-map" src="" alt="">
-            <div class="contacts__body">
-                <div class="divTable">
-                    <div class="div-table-col">
-                        <div class="divRow">
-                            <div class="divCell">Телефон:</div>
-                            <div  class="divCell">Email:</div>
-                            <div  class="divCell">Адресс</div>
-                            <div  class="divCell">График работы:</div>
-                         </div>
+    </div>
+    <div class="contacts">
+        <h1>Контакты</h1>
+        <img class="contacts-map" src="" alt="">
+        <div class="contacts__body">
+            <div class="divTable">
+                <div class="div-table-col">
+                    <div class="divRow">
+                        <div class="divCell">Телефон:</div>
+                        <div  class="divCell">Email:</div>
+                        <div  class="divCell">Адресс</div>
+                        <div  class="divCell">График работы:</div>
+                     </div>
                 </div>
                 <div class="div-table-col">
-                        <div class="divRow">
-                              <div class="divCell">561 MPa</div>
-                            <div class="divCell">251 MPa</div>
-                            <div class="divCell">53%</div>
-                            <div class="divCell">128HV10</div>
-                        </div>
+                    <div class="divRow">
+                          <div class="divCell">561 MPa</div>
+                        <div class="divCell">251 MPa</div>
+                        <div class="divCell">53%</div>
+                        <div class="divCell">128HV10</div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 {% endblock %}

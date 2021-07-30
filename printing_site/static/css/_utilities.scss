@@ -11,3 +11,34 @@
 .align-center {
   justify-content: center;
 }
+
+.direction-row {
+  flex-direction: row
+}
+
+.direction-column {
+  flex-direction: column
+}
+
+.bg-white {
+    background-color: #FFFFFF;
+    color: #1C1B23;
+}
+
+.bg-red {
+    background-color: #FF4140;
+    color: #FFFFFF;
+}
+
+.bg-dark {
+    background-color: #2B2828;
+    color: #E5E5E5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+br {
+  padding: 10px 0 10px 0;
+}

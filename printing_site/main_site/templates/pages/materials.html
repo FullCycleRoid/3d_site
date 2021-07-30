@@ -1,34 +1,21 @@
 {% extends 'pages/base.html' %}
 {% load static %}
-{% block title %}
-Ателье 3D печать
-{% endblock %}
+
+{% block title %}Материалы{% endblock %}
 
 {% block content %}
-<section>
-        <div class="zaglushka-container">
-        <h1>
-            Страница в разработке.
-        </h1>
+<section class="materials-section">
+    <div class="container flex-container align-center">
+        <div class="text-center materials-section__title">
+            <h1 >Материалы</h1>
+            <p>
+                Напишите нам, чтобы узнать возможности и характеристики конкретного матриала.
+                Если материал отсутствует среди перечисленных, мы закупим его под заказ.
+            </p>
+        </div>
     </div>
-
-        <a class="btn" data-toggle="modal" href="#myModal" >Запустить пример всплывающего окна</a>
-
-    <div class="modal" id="myModal">
-      <div class="modal-header">
-        <button class="close" data-dismiss="modal">×</button>
-        <h3>Заголовок</h3>
-      </div>
-      <div class="modal-body">
-        <p>Текст…</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#" class="btn">Закрыть</a>
-        <a href="#" class="btn btn-primary">Сохранить</a>
-      </div>
-    </div>
+    {% include "materials/metal.html" %}
+    {% include "materials/uv_lcd.html" %}
+    {% include "materials/fdm.html" %}
 </section>
-</div>
-
-
 {% endblock %}

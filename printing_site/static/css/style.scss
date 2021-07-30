@@ -1,0 +1,124 @@
+@import "_variables.scss";
+@import "_utilities.scss";
+@import "_materials.scss";
+@import "_metal.scss";
+@import "_first-screen.scss";
+@import "_main.scss";
+@import "_header.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Dosis', sans-serif;
+}
+
+body {
+	color: $primaryBackGroundColor;
+	font: 12px'Dosis','Oswald', sans-serif;
+    overflow-x:hidden;
+    //letter-spacing: 2px;
+}
+
+.materials {
+    margin: 15px 0 0 0;
+    height: 850px;
+    display:flex
+}
+
+.materials__block {
+    display: flex;
+    flex-direction: row;
+}
+
+.materials__title {
+    color: #777777;
+    margin: 0px 0 60px 0;
+}
+
+.materials__title h1{
+    font-size: 7em;
+    width: 300px;
+}
+
+.materials_text {
+    font-size: 2.5em;
+    width: 600px;
+}
+
+.materials__block img {
+    width:1000px
+}
+
+.div-table {
+  padding: 100px 0 0 0;
+  display: table;
+  width: 700px;
+  background-color: #eee;
+  border: 1px solid #666666;
+  border-spacing: 5px;
+}
+
+.material-table {
+    position: relative;
+    margin: -100px 0 0 0;
+}
+
+.div-table-row {
+  display: table-row;
+  width: 250px;
+  position: absolute;
+}
+
+.div-table-col {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;
+  width: 300px;
+  background-color: #eee;
+}
+
+.divCell {
+    font-size: 1.5em;
+
+}
+
+
+.contacts {
+    height: 450px;
+    background-color: #FF4140;
+}
+
+
+h1 {
+	font: 50px/80px 'Oswald', sans-serif;
+    font-weight: 500;
+	margin: 0;
+    color: #24242a;
+}
+
+h2 {
+	margin: 0;
+    color: #24242a;
+}
+
+p {
+    font-size: 20px;
+}
+
+.wow_offer {
+  font-size:1.2em;
+  color: firebrick;
+}
+
+.section__title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    width:700px;
+    color: #24242a;
+    font-size: 3.5em;
+  margin: 50px 0 10px 0;
+}

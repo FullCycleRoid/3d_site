@@ -1,0 +1,93 @@
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    padding-top: 15px;
+}
+
+.logo-red {
+    color: $primaryColor;
+    background-color: #FFFFFF;
+    font-family: $secondaryFontFamily;
+}
+
+.logo-white {
+    color: #2B2828;
+    background-color: #FFFFFF;
+}
+
+.logo-dark {
+    color: #FFFFFF;
+    background-color: #1C1B23;
+}
+
+.header__logo{
+    clear: page;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 5em;
+    color: #ff0200;
+    display: block;
+    align-self: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.header__logo:hover,
+.header__logo:active {
+    text-decoration: none;
+    color: #e22d2c;
+    cursor: pointer;
+}
+
+
+.navbar {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    align-self: start;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar li{
+    font-weight: bold;
+    font-size: 1em;
+	padding: 10px;
+}
+
+.navbar li:nth-child(7) {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.navbar li {
+    clear:both;
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.navbar a:hover{
+	text-decoration:none;
+	color:black;
+}
+
+.navbar li.active{
+	background: #29c5e6;
+	color: #fff;
+
+}

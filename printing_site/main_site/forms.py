@@ -1,6 +1,5 @@
 from django import forms
-from django.core.mail import send_mail
-from main_site.models import Contacts
+from .models import Contacts
 
 
 class OrderForm(forms.ModelForm):

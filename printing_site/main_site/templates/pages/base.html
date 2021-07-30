@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Titillium+Web:ital,wght@1,300&display=swap" rel="stylesheet">
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@300&display=swap" rel="stylesheet">
@@ -16,44 +16,26 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 </head>
 <body>
-<div id="wrapper">
     <header class="header">
         <a class="header__logo" href="{% url 'main_site:main' %}">
-            <span class="{% if 'Главная' in view.title %}logo-red
-                         {% elif 'О нас' in view.title %}logo-white
-                         {% elif 'Контакты' in view.title %}logo-dark
-                         {% else%}logo-white{%endif%}">
+            <span class="logo-red">
                 feed metal
             </span>
         </a>
         <ul class="navbar">
-            <li><a class="{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%} bg-dark{%endif%}" href="{% url 'main_site:printing' %}">ПЕЧАТЬ    МЕТАЛЛОМ</a></li>
-            <li><a class="{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%} bg-dark{%endif%}">МАТЕРИАЛЫ</a></li>
-            <li><a class="{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%}bg-dark{%endif%}" href="{% url 'main_site:about' %}">3D ФЕРМА</a></li>
-            <li><a class="{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%} bg-dark{%endif%}" href="{% url 'main_site:sintering' %}">СПЕКАНИЕ</a></li>
-            <li><a class="{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%} bg-dark{%endif%}">УСЛУГИ</a></li>
-            <li><a class="{% if 'Главная' in view.title %}bg-white{% elif 'О нас' in view.title %}bg-white{% else%} bg-dark{%endif%}" href="{% url 'main_site:contacts' %}">КОНТАКТЫ</a></li>
+            <li><a class="bg-white" href="{% url 'main_site:metal' %}">ПЕЧАТЬ МЕТАЛЛОМ</a></li>
+            <li><a class="bg-white" href="{% url 'main_site:materials' %}">МАТЕРИАЛЫ</a></li>
+            <li><a class="bg-white" href="{% url 'main_site:farm' %}">3D ФЕРМА</a></li>
+            <li><a class="bg-white" href="{% url 'main_site:sintering' %}">СПЕКАНИЕ</a></li>
+            <li><a class="bg-white">УСЛУГИ</a></li>
+            <li><a class="bg-white" href="{% url 'main_site:contacts' %}">КОНТАКТЫ</a></li>
         </ul>
     </header>
-        {% if "Главная" in view.title %}
-            {% block offer %}
-
-            {% endblock %}
-        {% else %}
-            <div id="heading">
-                <h1>{% if "О нас" in view.title %}{{view.title}}
-                    {% elif "Печать" in view.title %}{{view.title}}
-                    {% elif "Спекание" in view.title %}{{view.title}}
-                    {% elif "Контакты" in view.title %}{{view.title}}
-                    {% else %} 3D Ателье {% endif %}</h1>
-            </div>
             {% block content %}
             {% endblock %}
-        {% endif%}
-    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script src="{% static 'js/main.js'%}"></script>
+<!--    <script src="{% static 'js/main.js'%}"></script>-->
 </body>
 </html>

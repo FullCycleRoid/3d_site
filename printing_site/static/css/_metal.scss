@@ -1,0 +1,276 @@
+.metal-first-screen {
+  margin: 150px 0 0 100px;
+  position: relative;
+}
+
+.metal-first-screen__title {
+  font-size: 5em;
+  color: #24242a;
+  font-weight: 600;
+  width: 800px;
+
+}
+
+.metal-first-screen__title span {
+  color: #FF4140;
+}
+
+.metal-first-screen img {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 900px;
+  height: 600px;
+  transform: scaleX(-1);
+}
+
+.metal-first-screen input {
+  width:250px;
+  height: 50px;
+  background-color: #24242a;
+  color: #eee;
+  font-size: 2em;
+  margin: 400px 0 0 0;
+}
+
+.properties {
+  position: relative;
+  height: 700px;
+  background-color: #FF4140;
+  margin: 30px 0 0 0;
+}
+
+.properties__title {
+  color: #eee;
+  font-size: 4em;
+  padding: 50px 0 0 100px;
+  font-weight: 600;
+}
+
+.properties__first_img {
+  margin: 150px 0 0 200px;
+  width: 150px;
+  height: 240px;
+}
+
+.properties__second_img {
+  width: 600px;
+  height: 400px;
+  margin: 170px 0 0 15%;
+}
+
+.properties__border {
+  border-left: 2px solid black;
+  width:10px;
+  height: 240px;
+  position: absolute;
+  top: 350px;
+  left:150px
+}
+
+.properties__table {
+  display: flex;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  font-size: 2em;
+  color: #eee;
+}
+
+.first_col div,
+.second_col div {
+  border-top: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.first_col {
+  width:500px;
+}
+
+.application {
+  height: 1100px;
+  margin: 30px 0 0 0;
+}
+
+.application__title {
+  color: #24242a;
+  font-size: 4em;
+  padding: 50px 0 0 100px;
+  font-weight: 600;
+}
+
+.application__title:before {
+  content: "";
+  display: block;
+  padding: 20px;
+  border-top: 2px solid black;
+  width: 95%;
+  height: 3px;
+}
+
+.application__body__block {
+  display: flex;
+  margin: 30px 100px;
+}
+
+.application__body__block p {
+  margin-left: 20px;
+}
+
+.print_at_home {
+  position: relative;
+  height: 800px;
+}
+
+.print_at_home__block-title {
+  display: flex;
+  padding: 50px 0 0 100px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.print_at_home__block-title:after {
+  position: absolute;
+  content: "";
+  display: block;
+  margin: -50px 0 0 0;
+  border-top: 2px solid black;
+  width: 90%;
+  height: 3px;
+}
+
+.print_at_home__block-title__title {
+  color: #24242a;
+  font-size: 4em;
+  font-weight: 600;
+  width: 600px;
+}
+
+.print_at_home__block-title__paragraph {
+    width: 350px;
+    margin-right: 200px;
+}
+
+.print_at_home__block-title__paragraph p span {
+  color: #FF4140;
+}
+
+.print_at_home__images-block {
+  display: flex;
+  position: absolute;
+  left: 25%;
+  bottom: -450px;
+  width: 1280px;
+  justify-content: center;
+}
+
+.print_at_home__images-block__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.print_at_home__images-block__item img {
+  margin: auto;
+}
+
+.print_at_home__images-block__item p {
+  font-size: 1em;
+  align-self: center;
+  margin: 10px 0 0 0;
+}
+
+.print_at_home__images-block__track {
+  border: 1px solid black;
+  height: 1px;
+  width: 90px;
+  margin-top: 70px;
+}
+
+.process {
+  position: relative;
+  height: 800px;
+  background-color: #eee;
+  margin: 200px 100px 0 100px;
+}
+
+.process__title {
+  position: relative;
+  color: #24242a;
+  font-size: 4em;
+  font-weight: 600;
+  width: 800px;
+}
+
+.process__title:before {
+  position: absolute;
+  content: "";
+  display: block;
+  margin: -50px 0 0 0;
+  border-top: 2px solid black;
+  width: 215%;
+  height: 3px;
+}
+
+.process__block {
+  position: relative;
+  display: flex;
+  margin: 100px 20% 0 20%;
+}
+
+.process__line {
+  position: relative;
+  content: "";
+  border-left: 4px solid black;
+  height: 500px;
+  width:3px;
+  margin: 0 0 0 10px;
+}
+
+.process__line:after {
+  position: absolute;
+  left: -9px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #FF4140;
+
+}
+
+.process__block__text-item {
+  margin: 0 0 0 100px;
+}
+
+.process__block__text-item__title {
+  color: #FF4140;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.process__block__text-item__paragraph {
+  color: #24242a;
+  font-size: 1.5em;
+  font-weight: 600;
+  width: 400px;
+  margin: 20px 0 0 0;
+}
+
+.process__block__text-item {
+  margin: 0 0 0 100px;
+}
+
+.process__block__text-item__title {
+  color: #FF4140;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.process__block__text-item__paragraph {
+  color: #24242a;
+  font-size: 1.5em;
+  font-weight: 600;
+  width: 400px;
+  margin: 20px 0 0 0;
+}

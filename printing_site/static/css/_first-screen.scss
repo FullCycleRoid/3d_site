@@ -4,7 +4,8 @@
     justify-content: space-between;
 }
 
-.first-screen div {
+.first-screen__right,
+.send-file-block {
     display: flex;
     flex-direction: column;
 }
@@ -14,51 +15,80 @@
     object-fit: contain;
 }
 
-.first-screen .first-screen__right input {
+.first-screen .first-screen__right #calc-btn {
     position: absolute;
     margin: 120px 0 0 -180px;
     width: 252px;
     height: 116px;
-    background-color: $secondaryBackGroundColor;
+    background-color: #de2221;
     z-index: 1000;
     font-size: 2em;
     border: none;
     color: $secondaryColor;
     white-space: normal;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.first-screen .first-screen__right input:hover {
-    background-color: #de2221;
+.first-screen .first-screen__right #calc-btn:hover {
+    background-color: $secondaryBackGroundColor;
 }
 
-.first-screen .first-screen__left {
-    align-self: flex-end;
-    justify-content: revert;
-}
-
-.first-screen div:nth-child(1) img{
-    object-fit: contain;
-}
-
-.first-screen div:nth-child(1) h2 {
-    font-size: 4em;
-    color: $thirdColor;
-    padding: 0 0 120px 150px;
-    width: 550px;
-    font-weight: bold;
-    font-family: 'Dosis', sans-serif;
-
-}
-
-.first-screen div:nth-child(2) h2 {
-    font-size: 1.6em;
-    color: #2B2828;
-    align-self: start;
-    padding: 3px 0 3px 0;
-    font-family: 'Dosis', sans-serif;
-}
-
-.first-screen__text {
+.first-screen__right__text-block {
     padding: 20px 0 0 0
+}
+
+
+.first-screen__right__title {
+  color: $primaryColor;
+  font-size: 3em;
+  align-items: start;
+  padding: 0 0 15px 0;
+}
+
+.first-screen__left__title {
+  color: $thirdColor;
+  font-size: 4em;
+  padding: 0 0 120px 150px;
+  font-weight: bold;
+  font-family: 'Dosis', sans-serif;
+}
+
+#right_btn {
+  height: 50px;
+  width: 400px;
+  margin: 20px 0 0 0;
+  background-color: #de2221;
+  border:none;
+  color: $secondaryColor;
+  white-space: normal;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#right_btn:hover {
+  background-color: $secondaryBackGroundColor;
+}
+
+.send-file__title {
+  font-size: 1.5em;
+  padding: 0 0 10px 0;
+}
+
+.first-screen__left__title {
+  padding: 150px 0 0 250px;
+  font-size: 6em;
+}
+
+.send-file-block {
+  padding: 230PX 100px 0 50px;
+  font-size: 1.5em;
+}
+
+.send-file-block input {
+  padding: 10px;
+  margin: 10px;
+  color: #6c757d;
+}
+
+.send-file__comment {
+  height:100px;
 }

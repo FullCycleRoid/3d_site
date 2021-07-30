@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% load static %}
+
+<div class="container flex-container align-center">
+    <h2 class="section__title">Печать металлом</h2>
+</div>
+
+<div class="container flex-container align-center">
+    <div class="card direction-row metal__card">
+      <img class="metal__card__img " src="{% static 'images/materials/metal.jpg' %}" alt="Card image cap">
+      <div class="card-body text-center">
+        <h5 class="card-title">Нержавеющая стать 316l</h5>
+        <div class="metal__card-body">
+            <p class="metal__card-text">Новый матреиал печати металлом на 90% состоит из порошка нержавеющей стали и 10% связующего.
+                После удалаения связующего и обработки сыгрца в муфельной печи металлическое изделие готово.
+                Мы предоставляем уникальный подход позволяющий снизить цену 5-10 раз по сравнению с технологиями лазерного спекания.
+                <a href="{% url 'main_site:farm' %}" class="wow_offer">Нажми сюда, чтобы узнать больше про процесс печати металлом</a>
+            </p>
+            <ul class="metal__card-list">
+                <li>Цена<span>от 100 до 150 руб./см3</span></li>
+                <li>Предел прочности<span>561 MPa</span></li>
+                <li>Предел текучести<span>251 MPa</span></li>
+                <li>Относительное удлиннение<span>53%</span></li>
+                <li>Твердость по Виккерсу<span>128HV10</span></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+</div>
