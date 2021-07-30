@@ -1,0 +1,100 @@
+{% extends 'main_site/base.html' %}
+
+{% load static %}
+
+{% block title %}Печать металлом{% endblock %}
+
+{% block offer %}
+        <div class="first-screen">
+                <div class="first-screen__left">
+                        <h2 class="first-screen__left-offer">Ферма 3D печати</h2>
+                        <img src="{% static 'images/image 11.png' %}"alt="">
+                </div>
+                <div class="first-screen__right">
+                        <input type="button" value="Калькулятор стоимости STL">
+                        <img src="{% static 'images/image_01.jpg' %}" alt="">
+                        <div class="first-screen__text">
+                                <div class="first-screen__offer">Самая доступная печать металлом в России</div>
+                                <h2>Профессиональное оборудование</h2>
+                                <h2>Печать металлом от 100 руб/см3</h2>
+                                <h2>Зона печати до 300х400х500 мм</h2>
+                                <h2>Материал: Нержавеющая сталь 316l</h2>
+                                <h2>3d моделирование 800 руб/час</h2>
+                                <h2>График работы: Пн-Пт с 08.00 до 20.00</h2>
+                                <h2>E-mail:</h2>
+                                <h2>Тел.: +7 812 467-36-35</h2>
+                        </div>
+                </div>
+        </div>
+        <div class="process">
+
+        </div>
+        <div class="materials">
+                <div class="container">
+                        <div class="materials__block">
+                                <div>
+                                        <div class="materials__title">
+                                                <h1>Материалы</h1>
+                                        </div>
+                                        <div class="materials_text">
+                                                Металлонаполненный пластик - представляет
+                                                собой инновационную нить для
+                                                для производства деталей из стали марки 316L.
+                                        </div>
+                                </div>
+                                <img src="{% static 'images/filament.png' %}" alt="">
+                        </div>
+                        <div class="material-table">
+                                <h1>Характеристики</h1>
+                               <div class="divTable">
+                                        <div class="div-table-col">
+                                            <div class="divRow">
+                                                <div class="divCell">Предел прочности</div>
+                                                <div  class="divCell">Предел текучести</div>
+                                                <div  class="divCell">Относительное удлиннение</div>
+                                                <div  class="divCell">Твердость по Виккерсу</div>
+                                             </div>
+                                        </div>
+                                        <div class="div-table-col">
+                                            <div class="divRow">
+                                                  <div class="divCell">561 MPa</div>
+                                                <div class="divCell">251 MPa</div>
+                                                <div class="divCell">53%</div>
+                                                <div class="divCell">128HV10</div>
+                                            </div>
+                                        </div>
+                              </div>
+                        </div>
+                </div>
+        </div>
+        <div class="application">
+
+        </div>
+        <div class="chain">
+
+        </div>
+        <div class="contacts">
+            <h1>Контакты</h1>
+            <img class="contacts-map" src="" alt="">
+            <div class="contacts__body">
+                <div class="divTable">
+                    <div class="div-table-col">
+                        <div class="divRow">
+                            <div class="divCell">Телефон:</div>
+                            <div  class="divCell">Email:</div>
+                            <div  class="divCell">Адресс</div>
+                            <div  class="divCell">График работы:</div>
+                         </div>
+                </div>
+                <div class="div-table-col">
+                        <div class="divRow">
+                              <div class="divCell">561 MPa</div>
+                            <div class="divCell">251 MPa</div>
+                            <div class="divCell">53%</div>
+                            <div class="divCell">128HV10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

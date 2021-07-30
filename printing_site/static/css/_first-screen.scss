@@ -1,0 +1,64 @@
+.first-screen {
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-screen div {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-screen .first-screen__right img {
+    position: relative;
+    object-fit: contain;
+}
+
+.first-screen .first-screen__right input {
+    position: absolute;
+    margin: 120px 0 0 -180px;
+    width: 252px;
+    height: 116px;
+    background-color: $secondaryBackGroundColor;
+    z-index: 1000;
+    font-size: 2em;
+    border: none;
+    color: $secondaryColor;
+    white-space: normal;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;;
+}
+
+.first-screen .first-screen__right input:hover {
+    background-color: #de2221;
+}
+
+.first-screen .first-screen__left {
+    align-self: flex-end;
+    justify-content: revert;
+}
+
+.first-screen div:nth-child(1) img{
+    object-fit: contain;
+}
+
+.first-screen div:nth-child(1) h2 {
+    font-size: 4em;
+    color: $thirdColor;
+    padding: 0 0 120px 150px;
+    width: 550px;
+    font-weight: bold;
+    font-family: 'Dosis', sans-serif;
+
+}
+
+.first-screen div:nth-child(2) h2 {
+    font-size: 1.6em;
+    color: #2B2828;
+    align-self: start;
+    padding: 3px 0 3px 0;
+    font-family: 'Dosis', sans-serif;
+}
+
+.first-screen__text {
+    padding: 20px 0 0 0
+}
