@@ -4,32 +4,47 @@
 
 {% block content %}
 
+<div class="metal-first-screen">
+    <div class="metal-first-screen__title">МЫ ДЕЛАЕМ ПЕЧАТЬ МЕТАЛЛОМ <span>ДОСТУПНОЙ</span></div>
+    <input type="submit" value="Рассчитать STL">
+</div>
+
 <section>
-    <div class="metal-first-screen">
-        <div class="metal-first-screen__title">
-            МЫ ДЕЛАЕМ ПЕЧАТЬ МЕТАЛЛОМ <span>ДОСТУПНОЙ</span>
-        </div>
-        <img src="{% static 'images/metal/metal_offer.jpg' %}" alt="">
-        <input type="submit" value="Рассчитать STL">
-    </div>
     <div class="process">
-        <div class="process__title">
-            ПРОЦЕСС ПЕЧАТИ МЕТАЛЛОМ
-        </div>
+        <h1 class="section__title ">ПРОЦЕСС ПЕЧАТИ</h1>
         <div class="process__block">
-            <img class="process__block__img" src="{% static 'images/process/process1.jpg' %}" alt="">
-            <div class="process__line"></div>
-            <div class="process__block__text-item">
-                <div class="process__block__text-item__title">1/4 ПЕЧАТЬ</div>
-                <div class="process__block__text-item__paragraph">
+            <div class="process__block__img">
+                <img width="500px" src="" alt="">
+            </div>
+            <div class="process__block__text">
+                <h3 class="">1/4 ПЕЧАТЬ</h3>
+                <p class="" style="color:#24242a;">
                     Детали печатаются с использованием технологии
                     FDM / FFF из филамента состоящего на 90% из металла и 10% полимера.
-                </div>
+                </p>
+                <h3 class="" style="color:#24242a; margin-top:170px;">2/4 ДЕБИНДИНГ</h3>
+               <p class="" style="display: none;">
+                    Детали печатаются с использованием технологии
+                    FDM / FFF из филамента состоящего на 90% из металла и 10% полимера.
+                </p>
+                <h3 class="" style="color:#24242a; margin-top:15px;">3/4 СПЕКАНИЕ</h3>
+               <p class="" style="display: none;">
+                    Детали печатаются с использованием технологии
+                    FDM / FFF из филамента состоящего на 90% из металла и 10% полимера.
+                </p>
+                <h3 class="" style="color:#24242a; margin-top:15px;">4/4 МЕТАЛЛ</h3>
+                <p class="process__block__text-item__paragraph" style="display: none;">
+                    Детали печатаются с использованием технологии
+                    FDM / FFF из филамента состоящего на 90% из металла и 10% полимера.
+                </p>
             </div>
         </div>
     </div>
+</section>
+
+<section>
     <div class="properties">
-        <div class="properties__title">НЕРЖАВЕЮЩАЯ СТАЛЬ 316L</div>
+        <H1 class="properties__title">НЕРЖАВЕЮЩАЯ СТАЛЬ 316L</H1>
         <div class="properties__table">
             <div class="first_col">
                 <div>предел прочности</div>
@@ -49,8 +64,11 @@
         <img class="properties__second_img" src="{% static 'images/metal/properties1.jpg' %}" alt="">
 
     </div>
-    <div class="application">
-        <div class="application__title">ПРИМЕНЕНИЕ</div>
+</section>
+
+<section>
+     <div class="application">
+        <h1 class="application__title">ПРИМЕНЕНИЕ</h1>
         <div class="application__body">
             <div class="application__body__block">
                 <img src="{% static 'images/metal/application1.jpg' %}" alt="">
@@ -73,13 +91,16 @@
             </div>
         </div>
     </div>
-    <div class="print_at_home">
+</section>
+
+<section>
+     <div class="print_at_home">
         <div class="print_at_home__block-title">
-            <div class="print_at_home__block-title__title">
-                ТЕПЕРЬ ВЫ МОЖЕТЕ ПЕЧАТАТЬ У СЕБЯ ДОМА
-            </div>
+            <h2 class="print_at_home__block-title__title">
+                ТЕПЕРЬ ВЫ МОЖЕТЕ ПЕЧАТАТЬ МЕТАЛЛОМ У СЕБЯ ДОМА
+            </h2>
             <div class="print_at_home__block-title__paragraph">
-                <p>
+                <p class="small-text">
                     <span>Теперь вы можете печать даже у себя дома используя обычный 3D принтер! </span> <br>
                     Вместе с покупкой материала Ultrafuse, купите Тикет на дебиндинг и спекание. <br>
                     Вы присылаете распечатанный сырец нам, мы проводим обработку и высылаем готовое изделие обратно.
@@ -109,5 +130,6 @@
         </div>
     </div>
 </section>
+
 <script src="{% static 'js/scroll_slider.js' %}"></script>
 {% endblock %}

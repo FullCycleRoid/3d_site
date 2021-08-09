@@ -1,5 +1,6 @@
 @import "_variables.scss";
 @import "_utilities.scss";
+@import "grid.scss";
 @import "_materials.scss";
 @import "_metal.scss";
 @import "_first-screen.scss";
@@ -10,17 +11,93 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-  font-family: 'Dosis', sans-serif;
+body {
+	color: $thirdColor;
+	font: 16px $primaryFontFamily;
+    overflow-x:hidden;
+    background-color: #eee;
 }
 
-body {
-	color: $primaryBackGroundColor;
-	font: 12px'Dosis','Oswald', sans-serif;
-    overflow-x:hidden;
-    //letter-spacing: 2px;
+section {
+  padding: 50px 0 0 0;
 }
+
+.section__title {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+br {
+  padding: 10px 0 10px 0;
+}
+
+
+h1, h2, h3, h4, h5 , h6 {
+  color: #24242a;
+  text-transform: uppercase;
+  margin: 20px 0 20px 0;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: 700;
+
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+h4 {
+  font-size: 2em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.small-text {
+  font-size: 1.3em;
+}
+
+.bg-white {
+    background-color: $secondaryColor;
+    color: #2B2828;
+}
+
+.bg-red {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+}
+
+.bg-dark {
+    background-color: $thirdColor;
+}
+
+.text-bg-white {
+  color: $secondaryColor
+}
+
+.text-bg-red {
+  color: $primaryColor;
+}
+
+.text-bg-dark {
+  color: $thirdColor
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+
 
 .materials {
     margin: 15px 0 0 0;
@@ -76,7 +153,7 @@ body {
   float: left; /* fix for  buggy browsers */
   display: table-column;
   width: 300px;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .divCell {
@@ -84,27 +161,9 @@ body {
 
 }
 
-
 .contacts {
     height: 450px;
     background-color: #FF4140;
-}
-
-
-h1 {
-	font: 50px/80px 'Oswald', sans-serif;
-    font-weight: 500;
-	margin: 0;
-    color: #24242a;
-}
-
-h2 {
-	margin: 0;
-    color: #24242a;
-}
-
-p {
-    font-size: 20px;
 }
 
 .wow_offer {
@@ -112,13 +171,3 @@ p {
   color: firebrick;
 }
 
-.section__title {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    width:700px;
-    color: #24242a;
-    font-size: 3.5em;
-  margin: 50px 0 10px 0;
-}

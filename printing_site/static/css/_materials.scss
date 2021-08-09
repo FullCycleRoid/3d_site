@@ -1,8 +1,3 @@
-.materials-section {
-  padding: 50px 0 0 0;
-}
-
-
 .material__card {
     width: 30%;
     margin: 20px;
@@ -22,8 +17,6 @@
 }
 
 .card-title {
-    font-size: 2em;
-    color: #24242a;
     padding: 10px;
 }
 
@@ -39,11 +32,11 @@
 
 .metal__card {
     margin:20px
+
 }
 
 .metal__card__img {
-    width: 43%;
-    //padding: 30px;
+    flex: 0 0 40%;
 }
 
 .metal__card-list {
@@ -64,7 +57,6 @@
 }
 
 .metal__card-text {
-    font-size: 15.6px;
     color: #8f8f8f;
 }
 

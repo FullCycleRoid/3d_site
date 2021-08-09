@@ -2,3 +2,4 @@ venv/
 
 printing_site/config/env_variables.py
 
+.idea/
